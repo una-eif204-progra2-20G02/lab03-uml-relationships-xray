@@ -5,6 +5,8 @@ TransporteTerrestre::TransporteTerrestre() {}
 TransporteTerrestre::TransporteTerrestre(string marca, int velocidadMaxima, int cantidadPasajeros,int ruedas) : Transporte(
         marca, velocidadMaxima, cantidadPasajeros) {this->ruedas = ruedas;}
 
+TransporteTerrestre::~TransporteTerrestre() {}
+
 int TransporteTerrestre::getRuedas(){
     return ruedas;
 }
