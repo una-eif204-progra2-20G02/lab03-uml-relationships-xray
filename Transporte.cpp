@@ -1,14 +1,32 @@
+#include "Transporte.h"
 
-#include"Trasporte.h"
+Transporte::Transporte() {}
 
-Trasporte::Trasporte(){}
-Trasporte::Trasporte(string nombre, int velocidadMax)
-{
+Transporte::Transporte(string marca, int velocidadMaxima, int cantidadPasajeros) : marca(marca), velocidadMaxima(
+        velocidadMaxima), cantidadPasajeros(cantidadPasajeros) {}
 
+Transporte::~Transporte() {}
+
+string Transporte::getMarca(){
+    return marca;
 }
-Trasporte::~Trasporte(){}
 
-int Trasporte:: getNombre() const{}
-void Trasporte:: setNombre(int nombre){}
-int Trasporte:: getVelocidadMax() const{}
-void Trasporte:: setVelocidadMax(int velocidadMax){}
+void Transporte::setMarca(string marca) {
+    Transporte::marca = marca;
+}
+
+int Transporte::getVelocidadMaxima() const {
+    return velocidadMaxima;
+}
+
+void Transporte::setVelocidadMaxima(int velocidadMaxima) {
+    Transporte::velocidadMaxima = velocidadMaxima;
+}
+
+int Transporte::getCantidadPasajeros() const {
+    return cantidadPasajeros;
+}
+
+void Transporte::setCantidadPasajeros(int cantidadPasajeros) {
+    Transporte::cantidadPasajeros = cantidadPasajeros;
+}
