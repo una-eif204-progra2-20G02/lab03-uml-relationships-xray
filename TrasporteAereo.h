@@ -4,13 +4,12 @@
 #include"Trasporte.h"
 using namespace std;
 
-class TrasporteTerrestre : public Trasporte
+class TrasporteAerio : public Trasporte
 {
-
 public:
 
-	TrasporteTerrestre();
-	~TrasporteTerrestre();
+	TrasporteAerio();
+	~TrasporteAerio();
 
 	virtual string toString() = 0;
 };
