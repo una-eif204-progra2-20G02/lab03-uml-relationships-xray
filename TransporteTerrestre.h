@@ -1,16 +1,21 @@
-#pragma once
-#include<iostream>
-#include<sstream>
-#include"Trasporte.h"
+#ifndef LAB03_UML_RELATIONSHIPS_XRAY_TRANSPORTETERRESTRE_H
+#define LAB03_UML_RELATIONSHIPS_XRAY_TRANSPORTETERRESTRE_H
+
+#include "Transporte.h"
+
 using namespace std;
 
-class TrasporteTerrestre : public Trasporte
-{
-
+class TransporteTerrestre:public Transporte {
+private:
+    int ruedas;
 public:
+    TransporteTerrestre();
+    TransporteTerrestre(string marca, int velocidadMaxima, int cantidadPasajeros,int ruedas);
+    TransporteTerrestre(int ruedas);
 
-	TrasporteTerrestre();
-	~TrasporteTerrestre();
-
-	virtual string toString() = 0;
+    int getRuedas();
+    void setRuedas(int ruedas);
 };
+
+
+#endif //LAB03_UML_RELATIONSHIPS_XRAY_TRANSPORTETERRRESTRE_H
