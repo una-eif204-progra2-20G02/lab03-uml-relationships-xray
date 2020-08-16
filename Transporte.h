@@ -1,24 +1,33 @@
-#pragma once
-#include<iostream>
-#include<sstream>
+#ifndef LAB03_UML_RELATIONSHIPS_XRAY_TRANSPORTE_H
+#define LAB03_UML_RELATIONSHIPS_XRAY_TRANSPORTE_H
+
+#include <iostream>
+#include <sstream>
+
 using namespace std;
 
-class Trasporte
-{
+class Transporte {
 private:
-	string nombre;
-	int velocidadMax;
-
+    string marca;
+    int velocidadMaxima;
+    int cantidadPasajeros;
 public:
-	
-	Trasporte();
-	Trasporte(string nombre, int velocidadMax);
-	~Trasporte();
+    Transporte();
+    Transporte(string marca, int velocidadMaxima, int cantidadPasajeros);
 
-	int getNombre() const;
-	void setNombre(int nombre);
-	int getVelocidadMax() const;
-	void setVelocidadMax(int velocidadMax);
+    virtual ~Transporte();
 
-	virtual string toString() = 0;
+    string getMarca();
+    void setMarca(const string marca);
+
+    int getVelocidadMaxima() const;
+    void setVelocidadMaxima(int velocidadMaxima);
+
+    int getCantidadPasajeros() const;
+    void setCantidadPasajeros(int cantidadPasajeros);
+
+    virtual string toString() = 0;
 };
+
+
+#endif //LAB03_UML_RELATIONSHIPS_XRAY_TRANSPORTE_H
