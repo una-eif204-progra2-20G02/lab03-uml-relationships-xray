@@ -11,7 +11,7 @@ private:
 public:
     TransporteTerrestre();
     TransporteTerrestre(string marca, int velocidadMaxima, int cantidadPasajeros,int ruedas);
-    TransporteTerrestre(int ruedas);
+    virtual ~TransporteTerrestre();
 
     int getRuedas();
     void setRuedas(int ruedas);
